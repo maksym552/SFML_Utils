@@ -5,23 +5,26 @@ Button::Button(float x, float y, float width, float height)
 {
 	this->shape.setPosition(x, y);
 	this->shape.setSize(sf::Vector2f(width, height));
-	state = false;
+	this->state = false;
 }
 
 Button::Button(sf::FloatRect rect)
 {
 	this->shape.setPosition(rect.left, rect.top);
 	this->shape.setSize(sf::Vector2f(rect.width, rect.height));
+	this->state = false;
 }
 
 Button::Button(sf::Vector2f position, sf::Vector2f size)
 {
 	this->shape.setPosition(position);
 	this->shape.setSize(size);
+	this->state = false;
 }
 
 Button::Button()
 {
+	this->state = false;
 }
 
 void Button::update(sf::RenderWindow& window)
